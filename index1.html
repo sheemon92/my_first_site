@@ -1,0 +1,92 @@
+<html>
+<html lang="en">
+<head>
+        <title>smn mobile website</title>
+        <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class ="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class ="feature one">
+                    <img src="images/camera.png">
+                    <div>
+                        <h1 >Camera</h1>
+                        <p>64Mp rear cam, 10Mp front cam</p>
+                        <p>Widew angle lens</p>
+                    </div>
+                </div>
+                <div class ="feature two">
+                    <img src="images/processor.png">
+                    <div>
+                        <h1 >processor</h1>
+                        <p>Snapdragon Octa-core</p>
+                    </div>
+                </div>
+                <div class ="feature three">
+                    <img src="images/display.png">
+                    <div>
+                        <h1 >display</h1>
+                        <p>4K Display</p>
+                        <p>6.5"Mini -drop fullscreen</p>
+                        
+                    </div>
+                </div>
+                <div class ="feature four">
+                    <img src="images/battery.png">
+                    <div>
+                        <h1 >Battery life</h1>
+                        <p>High power Li-ion Battery</p>
+                        <p>5000mah,720 hrs standby</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <div class ="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h2>Features</h2>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");        
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+    
+</body>
+</html>
